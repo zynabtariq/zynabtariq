@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Calculator</h1>
+        <div class="screen">
+            <input type="number" name="" id="number1" class="a">
+            <input type="number" name="" id="number2" class="b">
+            <p>=</p>
+            <label type="number" name="" id="result"></label>
+        </div>
+        
+        <br><button onclick="add()">+</button>
+        <button onclick="substract()">-</button>
+        <button onclick="divide()">/</button>
+        <button onclick="multiply()">*</button><br>
+        <button class="log" onclick="log()">Log of 1st Num</button>
+        <button class="log" onclick="calsum()">Array Sum</button>
+        <button class="log" onclick="calsub()">Array Difference</button>
+    </div>
+   
+</body>
+<script>
+    function substract()
+    {
+        let num1 = document.getElementById('number1').value;
+        let num2 = document.getElementById('number2').value;
+       let result = document.getElementById('result');
+       result.innerHTML = (parseInt(num1) - parseInt(num2));
+    }
+    function add()
+    {
+        let num1 = document.getElementById('number1').value;
+        let num2 = document.getElementById('number2').value;
+        let result = document.getElementById('result');
+       result.innerHTML = (parseInt(num1) + parseInt(num2));
+    }
+    
+    function divide()
+    {
+        let num1 = document.getElementById('number1').value;
+        let num2 = document.getElementById('number2').value;
+        let result = document.getElementById('result');
+       result.innerHTML = ((parseInt(num1) / parseInt(num2).toFixed(2)));
+
+    }
+    function log()
+    {
+        let num1 = document.getElementById('number1').value;
+        let result = document.getElementById('result');
+       result.innerHTML = (Math.log(num1).toFixed(4));
+    }
+    function multiply()
+    {
+        let num1 = document.getElementById('number1').value;
+        let num2 = document.getElementById('number2').value;
+        let result = document.getElementById('result');
+       result.innerHTML = (parseInt(num1) * parseInt(num2));
+    }
+    function calsum()
+    {
+        let arr = [2,3,4,5,6];
+        var a = arr.reduce((a,b)=>(a+b));
+        var d = arr.reduce((a,b)=>(a/b));
+        var s = arr.reduce((a,b)=>(a-b));
+        var m = arr.reduce((a,b)=>(a*b));
+        console.log("m: "+m);
+        console.log("s: "+s);
+        console.log("d: "+d);
+        console.log("a: "+a);
+
+        let result = document.getElementById('result');
+        result.innerHTML = (s);
+
+    }
+    function calsub()
+    {
+        let arr = [2,3,4,5,6];
+        var s = arr.reduce((a,b)=>a-b,0);
+        let result = document.getElementById('result');
+        result.innerHTML = (s);
+
+    }
+</script>
+</html>

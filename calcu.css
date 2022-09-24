@@ -1,0 +1,50 @@
+button{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.screen
+{
+    display: flex;
+    flex-direction: row;
+
+}
+p
+{
+    margin-top: 20px;
+}
+.main
+{
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(180, 178, 178);
+}
+.log
+{
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.a,.b
+{
+height: 40px;
+width: 70px;
+margin: 10px;
+text-align: center;
+}
+label{
+    height: 30px;
+    width: 70px;
+    margin: 10px;
+    padding-top: 15px;
+    background-color: white;
+
+}
